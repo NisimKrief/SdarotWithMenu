@@ -10,11 +10,37 @@ import android.widget.EditText;
 import android.widget.Toast;
 import android.widget.ToggleButton;
 
+/**
+ * Main activity1.
+
+ *  @author	Nisim Doron Krief <nisimandroi@gmail.com>
+ *  @version	1.0
+ *  @since	3/01/2022 (the date of the package the class was added)
+ *  Program that uses list and context menu in order to calculate sdarot
+ *  this main activity get the netonim from the user */
 public class MainActivity extends AppCompatActivity {
+    /**
+     * The Tb.
+     */
     ToggleButton tb;
-    EditText mispar, kofetz;
+    /**
+     * The Mispar.
+     */
+    EditText mispar, /**
+     * The Kofetz.
+     */
+    kofetz;
+    /**
+     * The St.
+     */
     String st;
-    double sifra, kfitza;
+    /**
+     * The Sifra.
+     */
+    double sifra, /**
+     * The Kfitza.
+     */
+    kfitza;
 
 
     @Override
@@ -34,6 +60,11 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * Done.
+     *
+     * @param view the view
+     */
     public void Done(View view) {
         if(bodek() == true) {
             st = mispar.getText().toString();
@@ -53,6 +84,11 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * Bodek boolean.
+     *
+     * @return the boolean
+     */
     public boolean bodek(){
         st  = kofetz.getText().toString();
         if (st.matches("-?\\d+(\\.\\d+)?")) {
@@ -64,6 +100,11 @@ public class MainActivity extends AppCompatActivity {
         return false;
     }
 
+    /**
+     * Onoroff.
+     *
+     * @param view the view
+     */
     public void onoroff(View view) {
         if(tb.isChecked()){
             tb.setText("Geometrical");
